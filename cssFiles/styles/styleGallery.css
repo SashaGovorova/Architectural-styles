@@ -152,13 +152,15 @@ nav {
 
 .card {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 1280px;
   margin: 20px auto;
   border-radius: 8px;
   overflow: hidden;
   border-style: groove;
-  min-height: 600px;
+  min-height: 400px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .card iframe {
@@ -181,6 +183,55 @@ nav {
   color: #666;
   font-size: 18px;
   margin: 10px 0;
+}
+/* Кнопки */
+.buttonStyles {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buttonStyles a {
+  padding: 10px 20px;
+  background-color: #a64166;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  align-items: center;
+}
+
+.b1:hover {
+  background: #7dae73;
+}
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+#image, #iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+#image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#iframe {
+  display: none;
+  width: 100%;
+  height: 400px;
 }
 
 /* футер */

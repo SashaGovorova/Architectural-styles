@@ -37,88 +37,53 @@
         <div class="sidebar-card">
             <h1 id="classicism">Класицизм</h1>
             <div class="card">
-                <iframe
-                    src="https://app.sketchup.com/share/tc/europe/K5-D3V0y5go?stoken=A7AYaJ2HOGBEFgLqJyoW5ngCyLnZ8odftQ7KAa3aphHcsKo406BBmsBm4H1ngBe0&source=web"
-                    width="600" height="400" frameborder="0" allowfullscreen></iframe>
-                <div class="card-content">
-                    <h3>Менора</h3>
-                    <p>Рідкісний для міста приклад стилю класицизм в архітектурі культових будівель</p>
+                <div class="buttonStyles">
+                    <a href="#" id="toggleButton" onclick="toggleView()">Перейти в режим 3D</a>
                 </div>
-            </div>
-            <h1 id="eclecticism">Еклектика</h1>
-            <div class="card">
-                <iframe
-                    src="https://app.sketchup.com/share/tc/europe/K5-D3V0y5go?stoken=A7AYaJ2HOGBEFgLqJyoW5ngCyLnZ8odftQ7KAa3aphHcsKo406BBmsBm4H1ngBe0&source=web"
-                    width="600" height="400" frameborder="0" allowfullscreen></iframe>
-                <div class="card-content">
-                    <h3>Менора</h3>
-                    <p>Рідкісний для міста приклад стилю класицизм в архітектурі культових будівель</p>
-                </div>
-            </div>
-            <h1 id="modern">Модерн</h1>
-            <div class="card">
-                <iframe
-                    src="https://app.sketchup.com/share/tc/europe/K5-D3V0y5go?stoken=A7AYaJ2HOGBEFgLqJyoW5ngCyLnZ8odftQ7KAa3aphHcsKo406BBmsBm4H1ngBe0&source=web"
-                    width="600" height="400" frameborder="0" allowfullscreen></iframe>
-                <div class="card-content">
-                    <h3>Менора</h3>
-                    <p>Рідкісний для міста приклад стилю класицизм в архітектурі культових будівель</p>
-                </div>
-            </div>
-            <h1 id="constructivism">Конструктивізм</h1>
-            <div class="card">
-                <iframe
-                    src="https://app.sketchup.com/share/tc/europe/K5-D3V0y5go?stoken=A7AYaJ2HOGBEFgLqJyoW5ngCyLnZ8odftQ7KAa3aphHcsKo406BBmsBm4H1ngBe0&source=web"
-                    width="600" height="400" frameborder="0" allowfullscreen></iframe>
-                <div class="card-content">
-                    <h3>Менора</h3>
-                    <p>Рідкісний для міста приклад стилю класицизм в архітектурі культових будівель</p>
-                </div>
-            </div>
-            <h1 id="empire">Сталінський ампір</h1>
-            <div class="card">
-                <iframe
-                    src="https://app.sketchup.com/share/tc/europe/K5-D3V0y5go?stoken=A7AYaJ2HOGBEFgLqJyoW5ngCyLnZ8odftQ7KAa3aphHcsKo406BBmsBm4H1ngBe0&source=web"
-                    width="600" height="400" frameborder="0" allowfullscreen></iframe>
-                <div class="card-content">
-                    <h3>Менора</h3>
-                    <p>Рідкісний для міста приклад стилю класицизм в архітектурі культових будівель</p>
-                </div>
-            </div>
-            <h1 id="brutalism">Бруталізм</h1>
-            <div class="card">
-                <iframe
-                    src="https://app.sketchup.com/share/tc/europe/K5-D3V0y5go?stoken=A7AYaJ2HOGBEFgLqJyoW5ngCyLnZ8odftQ7KAa3aphHcsKo406BBmsBm4H1ngBe0&source=web"
-                    width="600" height="400" frameborder="0" allowfullscreen></iframe>
-                <div class="card-content">
-                    <h3>Менора</h3>
-                    <p>Рідкісний для міста приклад стилю класицизм в архітектурі культових будівель</p>
-                </div>
-            </div>
-            <h1 id="postmodernism">Постмодернізм</h1>
-            <div class="card">
-                <iframe
-                    src="https://app.sketchup.com/share/tc/europe/K5-D3V0y5go?stoken=A7AYaJ2HOGBEFgLqJyoW5ngCyLnZ8odftQ7KAa3aphHcsKo406BBmsBm4H1ngBe0&source=web"
-                    width="600" height="400" frameborder="0" allowfullscreen></iframe>
-                <div class="card-content">
-                    <h3>Менора</h3>
-                    <p>Рідкісний для міста приклад стилю класицизм в архітектурі культових будівель</p>
+
+                <div id="content">
+                    <img id="image" src="cssFiles/images/architects/трц європа.jpg" alt="Image" width="600"
+                        height="400">
+                    <iframe id="iframe"
+                        src="https://app.sketchup.com/share/tc/europe/K5-D3V0y5go?stoken=A7AYaJ2HOGBEFgLqJyoW5ngCyLnZ8odftQ7KAa3aphHcsKo406BBmsBm4H1ngBe0&source=web"
+                        width="600" height="400" frameborder="0" style="display:none;"></iframe>
                 </div>
             </div>
         </div>
     </main>
+    <script>
+        function toggleView() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            const iframe = document.getElementById("iframe");
+            const image = document.getElementById("image");
+            const button = document.getElementById("toggleButton");
+
+            if (image.style.display !== "none") {
+                image.style.display = "none";
+                iframe.style.display = "block";
+                button.textContent = "Перейти в режим 2D";
+            } else {
+                iframe.style.display = "none";
+                image.style.display = "block";
+                button.textContent = "Перейти в режим 3D";
+            }
+            setTimeout(function() {
+    window.scrollTo(0, currentScroll);
+  }, 10);
+        }
+    </script>
     <footer class="footer">
-        <h2>Відомості про сайт</h2>
+        <h2>Відомості про проєкт</h2>
         <hr class="line">
         <div class="about-container">
             <div class="about">
                 <img src="cssFiles/images/footer/manager.png" class="logo" alt="Контакти">
-                <h3>Автор проєкту</h3>
-                <p>Говорова Олександра Романівна</p>
+                <h3>Автор</h3>
+                <p>Говорова Олександра Романівна 10-В класу</p>
             </div>
             <div class="about">
                 <img src="cssFiles/images/footer/manager.png" class="logo" alt="Керівник">
-                <h3>Керівник проєкту</h3>
+                <h3>Керівник</h3>
                 <p>Пасько Анатолій Іванович</p>
             </div>
         </div>
