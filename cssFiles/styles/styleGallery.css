@@ -153,12 +153,12 @@ nav {
 .card {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 1080px;
   margin: 20px auto;
   border-radius: 8px;
   overflow: hidden;
   border-style: groove;
-  min-height: 400px;
+  min-height: 500px;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -217,21 +217,21 @@ nav {
 
 #image, #iframe {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 1080px;
+  height: 500px;
   max-width: 100%;
 }
 
 #image {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 1080px;
+  height: 500px;
 }
 
 #iframe {
   display: none;
   width: 100%;
-  height: 400px;
+  height: 500px;
 }
 
 /* футер */
