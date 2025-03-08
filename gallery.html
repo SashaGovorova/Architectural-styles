@@ -34,43 +34,56 @@
         </div>
     </header>
     <main class="info">
-        <div class="sidebar-card">
-            <h1 id="classicism">Класицизм</h1>
-            <div class="card">
-                <div class="buttonStyles">
-                    <a href="#" id="toggleButton" onclick="toggleView()">Перейти в режим 3D</a>
-                </div>
+        <h1>Класицизм</h1>
+        <div class="card">
+            <div class="buttonStyles">
+                <a href="#" class="toggleButton">Перейти в режим 3D</a>
+            </div>
+            <div class="content">
+                <img class="contentImage" src="cssFiles/images/gallery/класицизм2д.jpg" alt="Image">
+                <iframe class="contentIframe"
+                    src="https://app.sketchup.com/share/tc/europe/Aq-aI2uWGbs?stoken=IW4uBpz_2uNSEdZc6mOG09pXGWMiEF_bh7Z9Xc0erXeI1kEnH2iHiQon3Zz4THvr&source=web"
+                    frameborder="0">
+                </iframe>
+            </div>
+        </div>
 
-                <div id="content">
-                    <img id="image" src="cssFiles/images/gallery/класицизм2д.jpg" alt="Image" width="600"
-                        height="400">
-                    <iframe id="iframe"
-                        src="https://app.sketchup.com/share/tc/europe/TSP6a4a4gJw?stoken=r7Yo02aNTVsm8szKPoH9RaTJRDrvJwJmy--34aLTHbhv2GWyYyvL56r5qcP63e83&source=web"
-                        width="600" height="400" frameborder="0" style="display:none;"></iframe>
-                </div>
+        <h1>Сучасні стилі</h1>
+        <div class="card">
+            <div class="buttonStyles">
+                <a href="#" class="toggleButton">Перейти в режим 3D</a>
+            </div>
+            <div class="content">
+                <img class="contentImage" src="cssFiles/images/gallery/сучасні стилі.jpg" alt="Image">
+                <iframe class="contentIframe"
+                    src="https://app.sketchup.com/share/tc/europe/fZxAbO87Pz4?stoken=atKMHbcaLHrtcursQyCaFoSEEEHbeopgDFrpbIJekqEIoZvmltm-OC9V8VbvoaQx&source=web"
+                    frameborder="0">
+                </iframe>
             </div>
         </div>
     </main>
     <script>
-        function toggleView() {
-            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            const iframe = document.getElementById("iframe");
-            const image = document.getElementById("image");
-            const button = document.getElementById("toggleButton");
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".toggleButton").forEach(button => {
+                button.addEventListener("click", function (event) {
+                    event.preventDefault();
 
-            if (image.style.display !== "none") {
-                image.style.display = "none";
-                iframe.style.display = "block";
-                button.textContent = "Перейти в режим 2D";
-            } else {
-                iframe.style.display = "none";
-                image.style.display = "block";
-                button.textContent = "Перейти в режим 3D";
-            }
-            setTimeout(function() {
-    window.scrollTo(0, currentScroll);
-  }, 10);
-        }
+                    const card = this.closest(".card");  // Знаходимо батьківську картку
+                    if (!card) return;
+
+                    const image = card.querySelector(".contentImage");
+                    const iframe = card.querySelector(".contentIframe");
+
+                    if (image && iframe) {
+                        const is3D = image.style.display === "none";  // Перевіряємо поточний режим
+
+                        image.style.display = is3D ? "block" : "none";
+                        iframe.style.display = is3D ? "none" : "block";
+                        this.textContent = is3D ? "Перейти в режим 3D" : "Перейти в режим 2D";
+                    }
+                });
+            });
+        });
     </script>
     <footer class="footer">
         <h2>Відомості про проєкт</h2>
