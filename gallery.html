@@ -41,10 +41,10 @@
             </div>
             <div class="content">
                 <img class="contentImage" src="cssFiles/images/gallery/класицизм2д.jpg" alt="Image">
-                <iframe class="contentIframe"
-                    src="https://app.sketchup.com/share/tc/europe/Aq-aI2uWGbs?stoken=IW4uBpz_2uNSEdZc6mOG09pXGWMiEF_bh7Z9Xc0erXeI1kEnH2iHiQon3Zz4THvr&source=web"
-                    frameborder="0">
-                </iframe>
+                <iframe class="contentIframe" frameborder="0" allowfullscreen mozallowfullscreen="true"
+                    webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                    execution-while-out-of-viewport execution-while-not-rendered web-share
+                    src="https://sketchfab.com/models/47e95d50ee0b456cab9bf328a5e8c992/embed"> </iframe>
             </div>
         </div>
 
@@ -55,9 +55,10 @@
             </div>
             <div class="content">
                 <img class="contentImage" src="cssFiles/images/gallery/еклектика.jpg" alt="Image">
-                <iframe class="contentIframe"
-                    src="https://app.sketchup.com/share/tc/europe/nAEs-bpvRBQ?stoken=GtJWys7AIs3GRVkgOkNsU-_84hLxiNt1mGTI78P9ucJI4ECLnTo-9tsS-xcR2Qui&source=web"
-                    frameborder="0">
+                <iframe class="contentIframe" frameborder="0" allowfullscreen mozallowfullscreen="true"
+                    webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                    execution-while-out-of-viewport execution-while-not-rendered web-share
+                    src="https://sketchfab.com/models/3e3432b3ecee455c8e99f87a55a964e0/embed"> </iframe>
                 </iframe>
             </div>
         </div>
@@ -69,23 +70,39 @@
             </div>
             <div class="content">
                 <img class="contentImage" src="cssFiles/images/gallery/модерн.jpg" alt="Image">
-                <iframe class="contentIframe"
-                    src="https://app.sketchup.com/share/tc/europe/7OKebmYKbs4?stoken=yqQ85jnCQ5sjheU2HcGoXnGrLrfVqhK7h1kSKJ7HuMn3MUFA0U0uioWaPuFsvnYP&source=web"
-                    frameborder="0">
-                </iframe>
+                <iframe class="contentIframe" frameborder="0" allowfullscreen mozallowfullscreen="true"
+                    webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                    execution-while-out-of-viewport execution-while-not-rendered web-share
+                    src="https://sketchfab.com/models/da0430965f70443982bc3931b46b239b/embed"> </iframe>
             </div>
         </div>
 
-        <h1 id="styles">Бруталізм</h1>
+        <h1 id="constructivism">Конструктивізм</h1>
+        <div class="card">
+            <div class="buttonStyles">
+                <a href="#" class="toggleButton">Перейти в режим 3D</a>
+            </div>
+            <div class="content">
+                <img class="contentImage" src="cssFiles/images/gallery/конструктивізм.jpg" alt="Image">
+                <iframe class="contentIframe" frameborder="0" allowfullscreen
+                    mozallowfullscreen="true" webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                    execution-while-out-of-viewport execution-while-not-rendered web-share
+                    src="https://sketchfab.com/models/655ffb133a02419e862f78de6f55d348/embed"> </iframe>
+            </div>
+        </div>
+
+        <h1 id="brutalism">Бруталізм</h1>
         <div class="card">
             <div class="buttonStyles">
                 <a href="#" class="toggleButton">Перейти в режим 3D</a>
             </div>
             <div class="content">
                 <img class="contentImage" src="cssFiles/images/gallery/бруталізм.jpg" alt="Image">
-                <iframe class="contentIframe"
-                    src="https://app.sketchup.com/share/tc/europe/Yh2YOqag2RE?stoken=NF0JozvfusEFdKWNTGzWwfsV8-TtkX1Z_m4GYnzS8t10oG22umm8jKcnVKn0YAat&source=web"
-                    frameborder="0">
+                <iframe class="contentIframe" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                    execution-while-out-of-viewport execution-while-not-rendered web-share
+                    src="https://sketchfab.com/models/c3f33b71844f4badb27d2c08f2c556de/embed" frameborder="0">
                 </iframe>
             </div>
         </div>
@@ -97,10 +114,10 @@
             </div>
             <div class="content">
                 <img class="contentImage" src="cssFiles/images/gallery/сучасні стилі.jpg" alt="Image">
-                <iframe class="contentIframe"
-                    src="https://app.sketchup.com/share/tc/europe/fZxAbO87Pz4?stoken=atKMHbcaLHrtcursQyCaFoSEEEHbeopgDFrpbIJekqEIoZvmltm-OC9V8VbvoaQx&source=web"
-                    frameborder="0">
-                </iframe>
+                <iframe class="contentIframe" frameborder="0" allowfullscreen mozallowfullscreen="true"
+                    webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                    execution-while-out-of-viewport execution-while-not-rendered web-share
+                    src="https://sketchfab.com/models/f174754782df46efa5f61513bea1acc6/embed"> </iframe>
             </div>
         </div>
     </main>
@@ -109,16 +126,16 @@
             document.querySelectorAll(".toggleButton").forEach(btn => {
                 btn.addEventListener("click", function (e) {
                     e.preventDefault();
-    
+
                     const card = this.closest(".card");
                     if (!card) return;
-    
+
                     const img = card.querySelector(".contentImage");
                     const iframe = card.querySelector(".contentIframe");
-    
+
                     if (img && iframe) {
                         const is3D = img.style.display === "none";
-    
+
                         img.style.display = is3D ? "block" : "none";
                         iframe.style.display = is3D ? "none" : "block";
                         this.textContent = is3D ? "Перейти в режим 3D" : "Перейти в режим 2D";
@@ -132,15 +149,26 @@
         <hr class="line">
         <div class="about-container">
             <div class="about">
-                <img src="cssFiles/images/footer/manager.png" class="logo" alt="Контакти">
+                <img src="cssFiles/images/footer/student.png" class="logo" alt="Контакти">
                 <h3>Автор</h3>
-                <p>Говорова Олександра Романівна 10-В класу</p>
+                <p>Говорова Олександра Романівна</p>
+                <p>10-В клас</p>
             </div>
             <div class="about">
-                <img src="cssFiles/images/footer/manager.png" class="logo" alt="Керівник">
+                <img src="cssFiles/images/footer/manager.png" class="logo" alt="Контакти">
                 <h3>Керівник</h3>
                 <p>Пасько Анатолій Іванович</p>
+                <p>Кафедра Інформатики</p>
             </div>
+            <div class="about">
+                <img src="cssFiles/images/footer/edu.png" class="logo" alt="Контакти">
+                <h3>Навчальний заклад</h3>
+                <p>Дніпровський науковий ліцей інформаційних технологій</p>
+                <p>Дніпровської міської ради</p>
+            </div>
+        </div>
+        <div class="year">
+        <p>Дніпро (2025)</p>
         </div>
     </footer>
 </body>

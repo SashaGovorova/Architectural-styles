@@ -191,7 +191,7 @@ main {
   position: relative;
 }
 .b1:hover {
-  background: #7dae73;
+  background: #678ecc;
 }
 
 /* Картинки */
@@ -395,10 +395,16 @@ main {
 
 .about h3 {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .about p {
   font-size: 16px;
   margin: 5px 0;
+}
+.year p{
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+  color:#cccccc;
 }

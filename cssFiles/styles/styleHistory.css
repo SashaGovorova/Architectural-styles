@@ -176,6 +176,23 @@ main {
   margin-bottom: 30px;
   font-size: 18px;
 }
+/* Кнопки */
+.buttonStyles {
+  text-align: center;
+  position: relative;
+}
+.buttonStyles a {
+  padding: 8px 16px;
+  background-color: #a64166;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #fff;
+  justify-content: center;
+  position: relative;
+}
+.b1:hover {
+  background: #678ecc;
+}
 
 /* Картинки */
 .card {
@@ -362,10 +379,16 @@ main {
 
 .about h3 {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .about p {
   font-size: 16px;
   margin: 5px 0;
+}
+.year p{
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+  color:#cccccc;
 }
