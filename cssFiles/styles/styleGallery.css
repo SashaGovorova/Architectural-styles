@@ -84,10 +84,6 @@ nav {
   text-align: center;
 }
 
-.title_logo a {
-  text-decoration: none;
-}
-
 /* шапка */
 .header {
   width: 100%;
@@ -183,6 +179,22 @@ nav {
   text-align: center;
   margin-bottom: 20px;
 }
+.buttonStyles2 {
+  text-align: center;
+  margin-top: 20px;
+}
+.buttonStyles2 a {
+  padding: 8px 16px;
+  background-color: #a64166;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #fff;
+  justify-content: center;
+  position: relative;
+}
+.b1:hover {
+  background: #678ecc;
+}
 
 .toggleButton {
   padding: 10px 20px;
@@ -194,10 +206,6 @@ nav {
   font-size: 16px;
   cursor: pointer;
   display: inline-block;
-}
-
-.toggleButton:hover {
-  background: #7dae73;
 }
 
 .content {
