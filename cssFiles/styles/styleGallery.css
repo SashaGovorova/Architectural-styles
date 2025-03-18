@@ -197,18 +197,18 @@ nav {
 }
 
 .toggleButton {
-  padding: 10px 20px;
-  background-color: #a64166;
-  text-decoration: none;
+  padding: 0px 20px;
+  text-decoration: underline;
   border-radius: 4px;
-  color: #fff;
+  color: #555;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   display: inline-block;
 }
 .toggleButton:hover {
-  background: #7dae73;
+  text-decoration: underline;
+  color: #a64166;
 }
 
 .content {
