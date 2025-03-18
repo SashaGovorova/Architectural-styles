@@ -187,6 +187,9 @@ main {
   position: relative;
 }
 .b1:hover {
+  background: #7dae73;
+}
+.b2:hover {
   background: #678ecc;
 }
 
